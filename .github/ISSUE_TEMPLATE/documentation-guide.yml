@@ -1,0 +1,160 @@
+name: "📚 Documentation Guide"
+description: Propose or draft a documentation guide / tutorial for the project
+labels: ["documentation", "guide"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: A short description of the guide or tutorial you propose.
+      placeholder: "e.g., A step-by-step guide for integrating OAuth 2.0 with the API Gateway"
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area (Product/Feature)
+      description: Which product or feature area does this guide cover?
+      options:
+        - API Gateway
+        - API Manager
+        - API Analytics
+        - API Microgateway
+        - Developer Portal
+        - Installation & Setup
+        - Security & Authentication
+        - Deployment
+        - Troubleshooting
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Target Audience
+      description: Who is this guide intended for?
+      options:
+        - Beginner
+        - Intermediate
+        - Advanced
+        - All Levels
+    validations:
+      required: true
+
+  - type: dropdown
+    id: length
+    attributes:
+      label: Estimated Length
+      description: How long should this guide be?
+      options:
+        - Short guide (< 5 min read)
+        - Medium guide (5-15 min read)
+        - Step-by-step tutorial (15-30 min)
+        - Full tutorial (30+ min)
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Why is this guide needed? What user problem will it solve?
+      placeholder: "Explain the use case and the benefit this guide will provide to users..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What will be included in the guide (and what will not)?
+      placeholder: |
+        Will include:
+        - Topic A
+        - Topic B
+        
+        Will NOT include:
+        - Out of scope item
+    validations:
+      required: true
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements
+      description: Any prerequisites, setup steps, versions, or components the reader must have.
+      placeholder: |
+        - Required software versions
+        - Prerequisites
+        - Setup instructions
+        - Required knowledge level
+    validations:
+      required: false
+
+  - type: textarea
+    id: outline
+    attributes:
+      label: Proposed Content / Outline
+      description: Provide the structure and any draft content for the guide.
+      placeholder: |
+        1. Introduction
+        2. Prerequisites
+        3. Step 1 — [Description]
+        4. Step 2 — [Description]
+        5. Examples / Code Snippets
+        6. Troubleshooting / Tips
+        7. Conclusion / Next Steps
+      value: |
+        1. Introduction
+        2. Prerequisites
+        3. Step 1 — 
+        4. Step 2 — 
+        5. Examples / Code Snippets
+        6. Troubleshooting / Tips
+        7. Conclusion / Next Steps
+    validations:
+      required: true
+
+  - type: textarea
+    id: draft_content
+    attributes:
+      label: Draft Content / Code Examples
+      description: Provide any draft text, code blocks, commands, or snippets.
+      placeholder: "Paste code examples, sample configurations, or draft text here..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: files_to_update
+    attributes:
+      label: Files to Update / Locations
+      description: Which documentation pages, folders, or code examples should be updated or created?
+      placeholder: |
+        - docs/guides/[guide-name].md
+        - docs/tutorials/
+        - Code examples in /samples/
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: Links / References
+      description: Include links to related issues, PRs, external docs, or design notes.
+      placeholder: |
+        Related issues: #123, #456
+        External references: [link]
+        Design docs: [link]
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Screenshots, sample configs, or other helpful attachments.
+      placeholder: "Add any additional information, screenshots, or attachments..."
+    validations:
+      required: false
